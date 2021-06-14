@@ -47,3 +47,11 @@ Vue.use(VueLsLoader, [{
 <br />
 <br />
 <br />
+
+# Change Log
+
+<a href="https://github.com/louisnikai/vue-ls-loader/blob/master/CHANGELOG.md">CHANGELOG.md</a>
+
+<br />
+<br />
+<br />
