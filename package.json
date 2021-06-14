@@ -1,6 +1,6 @@
 {
   "name": "vue-ls-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "vue-ls Loader",
   "description": "The loader of vue-ls for vue, it needs to be used with vue-ls pachage.",
   "author": "Louis Ni <louisnikai@gmail.com>",

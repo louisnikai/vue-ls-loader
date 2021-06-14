@@ -1,5 +1,6 @@
 import vueStorage from 'vue-ls'
 import {
+  convertOption,
   validateStorage,
   createStorageOption
 } from './settings'
@@ -7,10 +8,11 @@ import {
 export default {
   install(Vue, options = ["local"]) {
     options.forEach(item => {
-      if (!validateStorage(item))
+      let option = convertOption(item);
+      if (!validateStorage(option.storage))
         return;
-      
-      vueStorage.install(Vue, createStorageOption(item));
+
+      vueStorage.install(Vue, createStorageOption(option.storage, option.namespace));
     });
   }
 }

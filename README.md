@@ -31,6 +31,17 @@ import VueLsLoader from 'vue-ls-loader'
 Vue.use(VueLsLoader) // default use local storage
 or
 Vue.use(VueLsLoader, ['local', 'session', 'memory']) //options param is an array, Can use 1-3 storages at the same time
+or
+Vue.use(VueLsLoader, [{
+    storage: 'local',
+    namespace: [namespace]
+}, {
+    storage: 'session',
+    namespace: [namespace]
+}, {
+    storage: 'memory',
+    namespace: [namespace]
+}])
 ```
 
 <br />

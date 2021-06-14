@@ -2,6 +2,15 @@ const _typeOf = (value) => {
   return Object.prototype.toString.call(value).match(/^\[object\s(.*)\]$/)[1].toLowerCase();
 }
 
+export function convertOption(option) {
+  if (_typeOf(option) === "string")
+    return {
+      storage: option
+    };
+
+  return option;
+}
+
 export function validateStorage(storage) {
   let revisedStorage = _typeOf(storage) === "string" ? storage.toLowerCase() : null;
   return ["local", "session", "memory"].includes(revisedStorage);
